@@ -1,23 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Post from "./components/Post.js";
+import Photos from "./components/Photos.js";
+import Contacts from "./components/Contacts";
+import { Switch, Route, NavLink } from "react-router-dom";
+
+const ANAKIN_IMAGE =
+  "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg";
+const RAY_IMAGE =
+  "https://specials-images.forbesimg.com/imageserve/5e63b3c8e1e617000759130e/960x0.jpg?fit=scale";
+const LUKE_IMAGE =
+  "https://media.nauticamilanonline.com/product/busto-luke-skywalker-star-wars-episode-viii-18cm-800x800.jpg";
+const RISE_SKYWALKER =
+  "https://media.tenor.com/images/ef05556fe6351303a924db6a05e5a4f4/tenor.png";
+
+const postAuthor = [
+  {
+    photo: ANAKIN_IMAGE,
+    name: "Anakin Skywalker",
+    nickname: "@dart_vader",
+    image: RAY_IMAGE,
+    content: "WTF? Who is Ray? Why she is Skywalker? Luke...?",
+  },
+  {
+    photo: LUKE_IMAGE,
+    name: "Luke Skywalker",
+    image: RISE_SKYWALKER,
+    content: "WTF?",
+  },
+];
+
+const HomeComponent = () => {
+  return <p>HomeComponent</p>;
+};
+
+const PostComponent = () =>
+  postAuthor.map((post) => <Post {...post} key={post.name} />);
+
+const PhotoComponent = () => {
+  return <Photos />;
+};
+
+const ContactComponent = () => {
+  return <Contacts />;
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <NavLink exact to="/">
+          Home
+        </NavLink>
+        <NavLink to="/posts">Posts</NavLink>
+        <NavLink to="/photos">Photos</NavLink>
+        <NavLink to="/contacts">Contacts</NavLink>
+      </nav>
+      <Switch>
+        <Route exact path="/" component={HomeComponent}></Route>
+        <Route path="/posts" component={PostComponent}></Route>
+        <Route path="/photos" component={PhotoComponent}></Route>
+        <Route path="/contacts" component={ContactComponent}></Route>
+      </Switch>
     </div>
   );
 }

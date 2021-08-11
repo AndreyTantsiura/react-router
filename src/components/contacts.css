@@ -1,0 +1,61 @@
+.wrapper {
+  background-position: center;
+  background-image: url("../img/iphone.png");
+  background-repeat: no-repeat;
+  height: 700px;
+  padding-top: 150px;
+}
+.iphone_menu {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  margin: 20px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.search {
+  width: 275px;
+  height: 25px;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #d6d6d6;
+  text-align: center;
+  font-size: large;
+}
+.checkboxes {
+  margin: 5px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+.contact_card {
+  margin: 5px 0;
+}
+.contact_card:hover {
+  background-color: #d6d6d6;
+  cursor: pointer;
+}
+.contact_heder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.number_phone {
+  width: 280px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #d6d6d6;
+}
