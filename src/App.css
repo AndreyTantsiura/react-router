@@ -29,3 +29,21 @@ a.active {
   color: black;
   box-shadow: 5px 5px 5px rgb(151, 146, 146);
 }
+.home_components {
+  background-image: url("https://lh3.googleusercontent.com/-C_4T4TUheTM/YKez98RTP7I/AAAAAAAAACY/4TzswPnC0bshykvB6tpCefxh0Jyb5n_GQCLcBGAsYHQ/s1280-fcrop64=1,0ab00ebbf54e6ad1/Adam_Strange_06.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 490px;
+  margin: 4em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: start;
+  color: #ebedf0;
+}
+.home_components_text {
+  margin-left: 2em;
+  font-family: sans-serif;
+}
+.home_components_text > h2 {
+  font-weight: 500;
+}

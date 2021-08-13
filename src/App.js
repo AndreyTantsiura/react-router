@@ -30,7 +30,14 @@ const postAuthor = [
 ];
 
 const HomeComponent = () => {
-  return <p>HomeComponent</p>;
+  return (
+    <div className="home_components">
+      <div className="home_components_text">
+        <h1>React-Router</h1>
+        <h2>Andrii Tantsiura</h2>
+      </div>
+    </div>
+  );
 };
 
 const PostComponent = () =>

@@ -11,6 +11,9 @@ import photo_9 from "../photo/9.png";
 import photo_10 from "../photo/10.png";
 import photo_11 from "../photo/11.png";
 import photo_12 from "../photo/12.png";
+import photo_13 from "../photo/13.png";
+import photo_14 from "../photo/14.png";
+import photo_15 from "../photo/15.png";
 import "./photo.css"
 
 const Photos = () => (
@@ -27,6 +30,9 @@ const Photos = () => (
     <img src={photo_10} alt=""/>
     <img src={photo_11} alt=""/>
     <img src={photo_12} alt=""/>
+    <img src={photo_13} alt=""/>
+    <img src={photo_14} alt=""/>
+    <img src={photo_15} alt=""/>
   </div>
 );
 

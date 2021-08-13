@@ -7,6 +7,7 @@
 }
 .iphone_menu {
   width: 280px;
+  height: 540px;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
@@ -35,9 +36,10 @@ p {
   align-items: center;
 }
 .inner {
+  width: 280px;
   display: flex;
   flex-direction: column;
-  width: 280px;
+  overflow: auto;
 }
 .contact_card {
   margin: 5px 0;
@@ -57,5 +59,23 @@ p {
   padding-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
+}
+.contact_info {
   border-bottom: 2px solid #d6d6d6;
 }
+.contact_info > a {
+  margin: 0;
+  padding: 0;
+  color: #000 !important;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+}
+.contact_info_chosed {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-style: italic;
+}
+
