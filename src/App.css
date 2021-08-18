@@ -10,6 +10,8 @@ nav {
   background: #ebedf0;
   z-index: 1;
   border-bottom: 1px solid rgb(151, 146, 146);
+  display: flex;
+  justify-content: space-between;
 }
 a {
   display: inline-block;
@@ -46,4 +48,7 @@ a.active {
 }
 .home_components_text > h2 {
   font-weight: 500;
+}
+.hover-item:hover {
+  box-shadow: none;
 }

@@ -3,6 +3,8 @@ import Post from "./components/Post.js";
 import Photos from "./components/Photos.js";
 import Contacts from "./components/Contacts";
 import { Switch, Route, NavLink } from "react-router-dom";
+import SignInComp from "./components/SignInComp";
+import SignUpComp from "./components/SignUpComp";
 
 const ANAKIN_IMAGE =
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg";
@@ -51,22 +53,38 @@ const ContactComponent = () => {
   return <Contacts />;
 };
 
+const SignInComponent = () => {
+  return <SignInComp />;
+};
+
+const SignUpComponent = () => {
+  return <SignUpComp />;
+};
+
 function App() {
   return (
     <div className="App">
       <nav>
-        <NavLink exact to="/">
-          Home
-        </NavLink>
-        <NavLink to="/posts">Posts</NavLink>
-        <NavLink to="/photos">Photos</NavLink>
-        <NavLink to="/contacts">Contacts</NavLink>
+        <div>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
+          <NavLink to="/posts">Posts</NavLink>
+          <NavLink to="/photos">Photos</NavLink>
+          <NavLink to="/contacts">Contacts</NavLink>
+        </div>
+        <div className="input_form">
+          <NavLink to="/sign_in">Sign in</NavLink>
+          <NavLink to="/sign_up">Sign up</NavLink>
+        </div>
       </nav>
       <Switch>
         <Route exact path="/" component={HomeComponent}></Route>
         <Route path="/posts" component={PostComponent}></Route>
         <Route path="/photos" component={PhotoComponent}></Route>
         <Route path="/contacts" component={ContactComponent}></Route>
+        <Route path="/sign_in" component={SignInComponent}></Route>
+        <Route path="/sign_up" component={SignUpComponent}></Route>
       </Switch>
     </div>
   );
