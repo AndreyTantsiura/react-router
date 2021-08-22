@@ -49,6 +49,15 @@ a.active {
 .home_components_text > h2 {
   font-weight: 500;
 }
+.hover-item {
+  text-decoration: none;
+  color: #a1d1f8;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
 .hover-item:hover {
   box-shadow: none;
+  color: #ebedf0;
 }
