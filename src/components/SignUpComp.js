@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import padlock from "../img/padlock.png";
 import { Switch, Route, Link } from "react-router-dom";
 import SignInComp from "./SignUpComp";
@@ -11,7 +11,6 @@ import {
   Input,
   CheckboxWrapper,
   Checkbox,
-  Button,
   Links,
   Span,
   InputNames,
@@ -35,7 +34,6 @@ export default function SignUpComp() {
     } else {
       e.target.style.borderColor = "red";
     }
-    
   };
 
   const lastNameHandler = (e) => {
@@ -71,10 +69,13 @@ export default function SignUpComp() {
       e.target.style.borderColor = "red";
     }
   };
-const user = {firstName, lastName, password, email}
+
   const rememberDataUser = () => {
-    localStorage.setItem("user", JSON.stringify(user))
-  }
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+    localStorage.setItem("firstName", firstName);
+    localStorage.setItem("lastName", lastName);
+  };
 
   return (
     <Wrapper>
@@ -106,13 +107,15 @@ const user = {firstName, lastName, password, email}
           ></Input>
         </InputsWrapper>
         <CheckboxWrapper>
-          <Checkbox type="checkbox" onClick={rememberDataUser}/>
+          <Checkbox type="checkbox" />
           <Span>
             I want to receive inspiration, marketing promoyions and updates via
             email
           </Span>
         </CheckboxWrapper>
-        <Button>SIGN UP</Button>
+        <Link to="/sign_in" className="button" onClick={rememberDataUser}>
+          SIGN UP
+        </Link>
         <Links>
           <Link to="/sign_in" className="hover-item">
             Aready have an account? Sign in

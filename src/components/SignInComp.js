@@ -11,7 +11,6 @@ import {
   Input,
   CheckboxWrapper,
   Checkbox,
-  Button,
   Links,
   Span,
 } from "./styledFormsComponents";
@@ -42,6 +41,23 @@ export default function SignInComp() {
     }
   };
 
+  const registeredEmail = localStorage.getItem("email");
+  const registeredPassword = localStorage.getItem("password");
+  const registeredFirstName = localStorage.getItem("firstName");
+  const registeredLasttName = localStorage.getItem("lastName");
+
+  function SignInClicked(e) {
+    if (registeredEmail === email && registeredPassword === password) {
+      alert(
+        "User: " +
+          registeredFirstName +
+          " " +
+          registeredLasttName +
+          ", is registered!"
+      );
+    } else alert("Error!!! User with this data is not registered! Please, go to tab Sign Up");
+  }
+
   return (
     <Wrapper>
       <Inner>
@@ -65,7 +81,9 @@ export default function SignInComp() {
           <Checkbox type="checkbox" />
           <Span>Remember me</Span>
         </CheckboxWrapper>
-        <Button>SIGN IN</Button>
+        <Link to="/sign_in" className="button" onClick={SignInClicked}>
+          SIGN IN
+        </Link>
         <Links>
           <Link to="/sign_in" className="hover-item">
             Forgot password?

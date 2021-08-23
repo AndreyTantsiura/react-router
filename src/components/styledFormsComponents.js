@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 350px;
-  height: 400px;
+  height: 430px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
@@ -57,24 +57,12 @@ export const CheckboxWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin 10px 0;
 `;
 
 export const Checkbox = styled.input`
   margin: 0 5px 0 0;
   font-size: 12px;
-`;
-
-export const Button = styled.button`
-  width: 100%;
-  border-radius: 3px;
-  border: none;
-  background-color: #a1d1f8;
-  font-size: 9px;
-  padding: 9px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-weight: bold;
 `;
 
 export const Links = styled.div`
