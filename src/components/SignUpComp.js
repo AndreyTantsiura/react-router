@@ -86,21 +86,25 @@ export default function SignUpComp() {
         <SignIn>Sign up</SignIn>
         <InputNames>
           <FirstName
+            type="text"
             onChange={(e) => fisrtNAmeHandler(e)}
             placeholder="First Name*"
           ></FirstName>
           <LastName
+            type="text"
             onChange={(e) => lastNameHandler(e)}
             placeholder="Last Name*"
           ></LastName>
         </InputNames>
         <InputsWrapper>
           <Input
+            type="e-mail"
             value={email}
             onChange={(e) => emailHandler(e)}
             placeholder="Email Adress *"
           ></Input>
           <Input
+            type="password"
             value={password}
             onChange={(e) => passwordHandler(e)}
             placeholder="Password *"

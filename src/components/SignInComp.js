@@ -55,7 +55,10 @@ export default function SignInComp() {
           registeredLasttName +
           ", is registered!"
       );
-    } else alert("Error!!! User with this data is not registered! Please, go to tab Sign Up");
+    } else
+      alert(
+        "Error!!! User with this data is not registered! Please, go to tab Sign Up"
+      );
   }
 
   return (
@@ -67,11 +70,13 @@ export default function SignInComp() {
         <SignIn>Sign in</SignIn>
         <InputsWrapper>
           <Input
+            type="e-mail"
             value={email}
             onChange={(e) => emailHandler(e)}
             placeholder="Email Adress *"
           ></Input>
           <Input
+            type="password"
             value={password}
             onChange={(e) => passwordHandler(e)}
             placeholder="Password *"
